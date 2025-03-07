@@ -1,0 +1,898 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: About
+  screenshotPath: ../images/template-previews/About.png
+-->
+{% extends "./layouts/base.html" %} 
+
+{% block body %}
+{# All templates are recommended to have an h1 present for both accessibility and SEO best practice. This should be at
+the top of the template before any other textual content. The h1 element below is within a dnd area to allow content
+editors the ability to adjust the content and alignment of the text. #}
+
+{% dnd_area "dnd_area" label="Main section", class="body-container about" %}
+
+
+{# Hero Left Text Plus Image #}
+{% dnd_section  padding={ 'top':0, 'bottom':0,'left':0, 'right':0 }, vertical_alignment='MIDDLE', full_width=true %}
+{% dnd_module path='/perfect-theme/modules/hero-banner/hero-left-text-plus-image', label="Hero Left Text Plus Image" 
+"style"= {
+      "padding": {
+        "padding": {
+          "top": {
+            "value": 70,
+            "units": "px"
+          },
+          "bottom": {
+            "value": 100,
+            "units": "px"
+          },
+          "left": {
+            "value": 0,
+            "units": "px"
+          },
+          "right": {
+            "value": 0,
+            "units": "px"
+          }
+        }
+      }
+    }
+     "other_setting"={
+      "default_class":"",
+      "default_id":""  , 
+          "background_color": {
+            "color": "#080808",
+            "opacity": 100
+          }
+        }
+      "hero_title"="Meet The Next <br>gen", 
+      "is_typewriter"="true",
+      "sub_text"="Business",
+      "richtext_field"="<p>Lorem ipsum dolor sit amet consectetur. Tellus enim elementum tempor diam Tincidunt senectus arcu enim semper eget tincidunt est facilisis. Neque curabitur.</p>",
+      "image"={
+                "size_type": "auto",
+                "src": "{{ get_asset_url('/perfect-theme/images/hero-banner/hero-image.png') }}",
+                "alt": "online-marketing ",
+                "loading": "lazy",
+                "width": 501,
+                "height": 501,
+                "max_width": 501,
+                "max_height": 501
+              },
+        "cta_group"=[
+                {
+                  "cta_select": "btn-primary",
+                  "cta_link": {
+                    "url": {
+                      "content_id": null,
+                      "type": "EXTERNAL",
+                      "href": ""
+                    },
+                    "open_in_new_tab": false,
+                    "no_follow": false
+                  },
+                  "cta_label": "Get Started"
+                },
+                {
+                  "cta_select": "btn-secodary",
+                  "cta_link": {
+                    "url": {
+                      "content_id": null,
+                      "type": "EXTERNAL",
+                      "href": ""
+                    },
+                    "open_in_new_tab": false,
+                    "no_follow": false
+                  },
+                  "cta_label": "Contact sale"
+                } 
+            ]
+%}
+{% end_dnd_module %}
+{% end_dnd_section %}
+
+{# Content - Two Column Text Plus Image #}
+{% dnd_section  padding={ 'top':0, 'bottom':0,'left':0, 'right':0 }, vertical_alignment='MIDDLE', full_width=true %}
+{% dnd_module path='/perfect-theme/modules/content/content-two-column-text-plus-image', label="Content - Two Column Text Plus Image" 
+"style"= {
+      "padding": {
+        "padding": {
+          "top": {
+            "value": 100,
+            "units": "px"
+          },
+          "bottom": {
+            "value": 100,
+            "units": "px"
+          },
+          "left": {
+            "value": 0,
+            "units": "px"
+          },
+          "right": {
+            "value": 0,
+            "units": "px"
+          }
+        }
+      }
+    } 
+      "other_setting"={
+              "section_class":"",
+              "section_id":""  ,
+              "background_color": {
+                  "color": "#EEEEEE",
+                  "opacity": 100
+                }
+        }
+      "zig_zag_group"=[
+      {
+     "reverse_section": "false",
+      "title": "A Digital Business that grow with you",
+      "contain":"<p>Lorem ipsum dolor sit amet consectetur. Aliquet vestibulum lacus ac pharetra fermentum. Ipsum pellentesque cras id lacus bibendum volutpat. Dolor sed commodo facilisis mi justo tortor.</p>",
+      "cta_link": {
+                    "url": {
+                      "content_id": null,
+                      "type": "EXTERNAL",
+                      "href": ""
+                    },
+                    "open_in_new_tab": false,
+                    "no_follow": false
+                  },
+       "cta_label": "Get Started",
+        "image": {
+                      "size_type": "auto",
+                      "src": "{{ get_asset_url('/perfect-theme/images/content/two-col-image.png') }}",
+                      "alt": "two-col-image",
+                      "loading": "lazy",
+                      "width": 555,
+                      "height": 499,
+                      "max_width": 555,
+                      "max_height": 499
+                    }
+
+      }
+      ]
+%}
+{% end_dnd_module %}
+{% end_dnd_section %}
+
+{# Content - Two Column Text Plus Image #}
+{% dnd_section  padding={ 'top':0, 'bottom':0,'left':0, 'right':0 }, vertical_alignment='MIDDLE', full_width=true %}
+{% dnd_module path='/perfect-theme/modules/content/content-two-column-text-plus-image', label="Content - Two Column Text Plus Image" 
+"style"= {
+      "padding": {
+        "padding": {
+          "top": {
+            "value": 100,
+            "units": "px"
+          },
+          "bottom": {
+            "value": 100,
+            "units": "px"
+          },
+          "left": {
+            "value": 0,
+            "units": "px"
+          },
+          "right": {
+            "value": 0,
+            "units": "px"
+          }
+        }
+      }
+    } 
+      "other_setting"={
+              "section_class":"",
+              "section_id":""  ,
+              "background_color": {
+                  "color": "#EEEEEE",
+                  "opacity": 100
+                }
+        }
+      "zig_zag_group"=[
+      {
+     "reverse_section": "true",
+      "title": "Our vision",
+      "contain":"<p>Lorem ipsum dolor sit amet consectetur. Aliquet vestibulum lacus ac pharetra fermentum. Ipsum pellentesque cras id lacus bibendum volutpat. Dolor sed commodo facilisis mi justo tortor.</p>",
+      "cta_link": {
+                    "url": {
+                      "content_id": null,
+                      "type": "EXTERNAL",
+                      "href": ""
+                    },
+                    "open_in_new_tab": false,
+                    "no_follow": false
+                  },
+       "cta_label": "Get Started",
+        "image": {
+                      "size_type": "auto",
+                      "src": "{{ get_asset_url('/perfect-theme/images/content/two-col-image.png') }}",
+                      "alt": "two-col-image",
+                      "loading": "lazy",
+                      "width": 555,
+                      "height": 499,
+                      "max_width": 555,
+                      "max_height": 499
+                    }
+
+      }
+      ]
+%}
+{% end_dnd_module %}
+{% end_dnd_section %}
+
+
+{# Content - Statistics Counter #}
+{% dnd_section  padding={ 'top':0, 'bottom':0,'left':0, 'right':0 }, vertical_alignment='MIDDLE', full_width=true %}
+{% dnd_module path='/perfect-theme/modules/content/content-statistics-counter', label="Content - Statistics Counter" 
+"style"= {
+      "padding": {
+        "padding": {
+          "top": {
+            "value": 100,
+            "units": "px"
+          },
+          "bottom": {
+            "value": 100,
+            "units": "px"
+          },
+          "left": {
+            "value": 0,
+            "units": "px"
+          },
+          "right": {
+            "value": 0,
+            "units": "px"
+          }
+        }
+      }
+    } 
+        "other_setting"={
+            "section_class":"",
+            "section_id":""  ,
+            "background_color": {
+                "color": "#FFFFFF",
+                "opacity": 100
+            }
+        }
+        "title"="Our growth and impact in number",
+        "counter_group"=[
+        {
+        "number":"200",
+        "number_after_sign":"+",
+        "counter_title":"Projects",
+        "contain":"<p>Lorem ipsum dolor sit amet consectetur. Nunc nisl dictumst porttitor ut aenean consectetur scelerisque condimentum vivamus.</p>"
+        },
+        {
+        "number":"10",
+        "number_after_sign":"K",
+        "counter_title":"User satisfaction",
+        "contain":"<p>Lorem ipsum dolor sit amet consectetur. Nunc nisl dictumst porttitor ut aenean consectetur scelerisque condimentum vivamus.</p>"
+        },
+        {
+        "number":"20",
+        "number_after_sign":"+",
+        "counter_title":"Technologies",
+        "contain":"<p>Lorem ipsum dolor sit amet consectetur. Nunc nisl dictumst porttitor ut aenean consectetur scelerisque condimentum vivamus.</p>"
+        }
+        ]
+%}
+{% end_dnd_module %}
+{% end_dnd_section %}
+
+{# Testimonial - Three Column Box #}
+{% dnd_section  padding={ 'top':0, 'bottom':0,'left':0, 'right':0 }, vertical_alignment='MIDDLE', full_width=true %}
+{% dnd_module path='/perfect-theme/modules/testimonial/testimonial-three-column-box', label="Testimonial - Three Column Box" 
+"style"= {
+      "padding": {
+        "padding": {
+          "top": {
+            "value": 100,
+            "units": "px"
+          },
+          "bottom": {
+            "value": 100,
+            "units": "px"
+          },
+          "left": {
+            "value": 0,
+            "units": "px"
+          },
+          "right": {
+            "value": 0,
+            "units": "px"
+          }
+        }
+    }
+}
+"other_setting"={
+    "section_class":"",
+    "section_id":""  ,
+    "background_color": {
+        "color": "#EEEEEE",
+        "opacity": 100
+    }
+}
+ "title"="What our Subscriber say",
+ "contain"="<p>Lorem ipsum dolor sit amet consectetur. Imperdiet condimentum sed fusce suspendisse iaculis. Euismod lacus non tortor euismod habitant condimentum commodo ultrices.</p>",
+ "cta_choice"="btn-primary"
+ "cta_link"= {
+                    "url":{
+                      "content_id": null,
+                      "type": "EXTERNAL",
+                      "href": ""
+                    },
+                    "open_in_new_tab": false,
+                    "no_follow": false
+                  },
+       "cta_label"= "Show more",
+       "testimonial"=[
+           {
+             "image": {
+                      "size_type": "auto",
+                      "src": "{{ get_asset_url('/perfect-theme/images/content/testimonial-image.png') }}",
+                      "alt": "testimonial-s1",
+                      "loading": "lazy",
+                      "width": 100,
+                      "height": 100,
+                      "max_width": 100,
+                      "max_height": 100
+                       },
+                "icon":'<svg xmlns="http://www.w3.org/2000/svg" width="19" height="22" viewBox="0 0 19 22" fill="none">
+                          <path d="M6.29424 8.63292C5.23025 10.5332 2.0385 10.5332 2.0385 10.5332C2.03844 6.74369 1.68729 4.86371 3.10253 2.94937C4.16684 1.48359 5.48477 1.89917 6.29424 2.95427C7.10371 4.00937 7.35823 6.73264 6.29424 8.63292Z" fill="#8A06BE"/>
+                          <path d="M2.0385 10.5332C2.0385 10.5332 5.23025 10.5332 6.29424 8.63292C7.35823 6.73264 7.10371 4.00937 6.29424 2.95427C5.48477 1.89917 4.16684 1.48359 3.10253 2.94937C1.68729 4.86371 2.03844 6.74369 2.0385 10.5332ZM2.0385 10.5332C2.11509 13.8255 3.10254 16.2163 3.63449 17.1635C4.57522 18.8058 5.14916 19.3772 6.29424 20" stroke="#8A06BE" stroke-width="3" stroke-linecap="round"/>
+                          <path d="M16.2942 8.63292C15.2303 10.5332 12.0385 10.5332 12.0385 10.5332C12.0384 6.74369 11.6873 4.86371 13.1025 2.94937C14.1668 1.48359 15.4848 1.89917 16.2942 2.95427C17.1037 4.00937 17.3582 6.73264 16.2942 8.63292Z" fill="#8A06BE"/>
+                          <path d="M12.0385 10.5332C12.0385 10.5332 15.2303 10.5332 16.2942 8.63292C17.3582 6.73264 17.1037 4.00937 16.2942 2.95427C15.4848 1.89917 14.1668 1.48359 13.1025 2.94937C11.6873 4.86371 12.0384 6.74369 12.0385 10.5332ZM12.0385 10.5332C12.1151 13.8255 13.1025 16.2163 13.6345 17.1635C14.5752 18.8058 15.1492 19.3772 16.2942 20" stroke="#8A06BE" stroke-width="3" stroke-linecap="round"/>
+                        </svg>',
+                "title":"Tatiana Torff",
+                "contain":"<p>Lorem ipsum dolor sit amet consectetur. Pellentesque non nunc sit nullam. Dolor condimentum netus fermentum</p>"
+             },
+             {
+             "image": {
+                      "size_type": "auto",
+                      "src": "{{ get_asset_url('/perfect-theme/images/content/testimonial-image2.png') }}",
+                      "alt": "testimonial-s2",
+                      "loading": "lazy",
+                      "width": 100,
+                      "height": 100,
+                      "max_width": 100,
+                      "max_height": 100
+                       },
+                 "icon":'<svg xmlns="http://www.w3.org/2000/svg" width="19" height="22" viewBox="0 0 19 22" fill="none">
+                          <path d="M6.29424 8.63292C5.23025 10.5332 2.0385 10.5332 2.0385 10.5332C2.03844 6.74369 1.68729 4.86371 3.10253 2.94937C4.16684 1.48359 5.48477 1.89917 6.29424 2.95427C7.10371 4.00937 7.35823 6.73264 6.29424 8.63292Z" fill="#8A06BE"/>
+                          <path d="M2.0385 10.5332C2.0385 10.5332 5.23025 10.5332 6.29424 8.63292C7.35823 6.73264 7.10371 4.00937 6.29424 2.95427C5.48477 1.89917 4.16684 1.48359 3.10253 2.94937C1.68729 4.86371 2.03844 6.74369 2.0385 10.5332ZM2.0385 10.5332C2.11509 13.8255 3.10254 16.2163 3.63449 17.1635C4.57522 18.8058 5.14916 19.3772 6.29424 20" stroke="#8A06BE" stroke-width="3" stroke-linecap="round"/>
+                          <path d="M16.2942 8.63292C15.2303 10.5332 12.0385 10.5332 12.0385 10.5332C12.0384 6.74369 11.6873 4.86371 13.1025 2.94937C14.1668 1.48359 15.4848 1.89917 16.2942 2.95427C17.1037 4.00937 17.3582 6.73264 16.2942 8.63292Z" fill="#8A06BE"/>
+                          <path d="M12.0385 10.5332C12.0385 10.5332 15.2303 10.5332 16.2942 8.63292C17.3582 6.73264 17.1037 4.00937 16.2942 2.95427C15.4848 1.89917 14.1668 1.48359 13.1025 2.94937C11.6873 4.86371 12.0384 6.74369 12.0385 10.5332ZM12.0385 10.5332C12.1151 13.8255 13.1025 16.2163 13.6345 17.1635C14.5752 18.8058 15.1492 19.3772 16.2942 20" stroke="#8A06BE" stroke-width="3" stroke-linecap="round"/>
+                        </svg>',
+                "title":"Roger Saris",
+                "contain":"<p>Lorem ipsum dolor sit amet consectetur. Pellentesque non nunc sit nullam. Dolor condimentum netus fermentum</p>"
+             },
+             {
+             "image": {
+                      "size_type": "auto",
+                      "src": "{{ get_asset_url('/perfect-theme/images/content/testimonial-image3.png') }}",
+                      "alt": "testimonial-s3",
+                      "loading": "lazy",
+                      "width": 100,
+                      "height": 100,
+                      "max_width": 100,
+                      "max_height": 100
+                       },
+                "icon":'<svg xmlns="http://www.w3.org/2000/svg" width="19" height="22" viewBox="0 0 19 22" fill="none">
+                          <path d="M6.29424 8.63292C5.23025 10.5332 2.0385 10.5332 2.0385 10.5332C2.03844 6.74369 1.68729 4.86371 3.10253 2.94937C4.16684 1.48359 5.48477 1.89917 6.29424 2.95427C7.10371 4.00937 7.35823 6.73264 6.29424 8.63292Z" fill="#8A06BE"/>
+                          <path d="M2.0385 10.5332C2.0385 10.5332 5.23025 10.5332 6.29424 8.63292C7.35823 6.73264 7.10371 4.00937 6.29424 2.95427C5.48477 1.89917 4.16684 1.48359 3.10253 2.94937C1.68729 4.86371 2.03844 6.74369 2.0385 10.5332ZM2.0385 10.5332C2.11509 13.8255 3.10254 16.2163 3.63449 17.1635C4.57522 18.8058 5.14916 19.3772 6.29424 20" stroke="#8A06BE" stroke-width="3" stroke-linecap="round"/>
+                          <path d="M16.2942 8.63292C15.2303 10.5332 12.0385 10.5332 12.0385 10.5332C12.0384 6.74369 11.6873 4.86371 13.1025 2.94937C14.1668 1.48359 15.4848 1.89917 16.2942 2.95427C17.1037 4.00937 17.3582 6.73264 16.2942 8.63292Z" fill="#8A06BE"/>
+                          <path d="M12.0385 10.5332C12.0385 10.5332 15.2303 10.5332 16.2942 8.63292C17.3582 6.73264 17.1037 4.00937 16.2942 2.95427C15.4848 1.89917 14.1668 1.48359 13.1025 2.94937C11.6873 4.86371 12.0384 6.74369 12.0385 10.5332ZM12.0385 10.5332C12.1151 13.8255 13.1025 16.2163 13.6345 17.1635C14.5752 18.8058 15.1492 19.3772 16.2942 20" stroke="#8A06BE" stroke-width="3" stroke-linecap="round"/>
+                        </svg>',
+                "title":"Madelyn Stanton",
+                "contain":"<p>Lorem ipsum dolor sit amet consectetur. Pellentesque non nunc sit nullam. Dolor condimentum netus fermentum</p>"
+             }
+
+       ]
+
+%}
+{% end_dnd_module %}
+{% end_dnd_section %}
+
+{# Left Text Plus CTA #}
+{% dnd_section  padding={ 'top':0, 'bottom':0,'left':0, 'right':0 }, vertical_alignment='MIDDLE', full_width=true %}
+{% dnd_module path='/perfect-theme/modules/left-text-plus-cta', label="Left Text Plus CTA" 
+    "style"= {
+      "padding": {
+        "padding": {
+          "top": {
+            "value": 100,
+            "units": "px"
+          },
+          "bottom": {
+            "value": 100,
+            "units": "px"
+          },
+          "left": {
+            "value": 0,
+            "units": "px"
+          },
+          "right": {
+            "value": 0,
+            "units": "px"
+          }
+        }
+      }
+    }
+          "other_setting"={
+            "section_class":"",
+            "section_id":""  ,
+            "background_color": {
+                "color": "#FFFFFF",
+                "opacity": 100
+            },
+            "text_color":{
+            "color":"#8A06BE",
+             "opacity": 100
+            }
+        }     
+      "title"="Open your account today and experience the next-gen Digital Business.",
+      "cta_link"= {
+                    "url":{
+                      "content_id": null,
+                      "type": "EXTERNAL",
+                      "href": ""
+                    },
+                    "open_in_new_tab": false,
+                    "no_follow": false
+                  },
+       "cta_label"= "Discover"
+%}
+{% end_dnd_module %}
+{% end_dnd_section %}
+
+{# Team - Three Column Grid #}
+{% dnd_section  padding={ 'top':0, 'bottom':0,'left':0, 'right':0 }, vertical_alignment='MIDDLE', full_width=true %}
+{% dnd_module path='/perfect-theme/modules/team-three-column-grid', label="Team - Three Column Grid" 
+
+"style"= {
+      "padding": {
+        "padding": {
+          "top": {
+            "value": 100,
+            "units": "px"
+          },
+          "bottom": {
+            "value": 100,
+            "units": "px"
+          },
+          "left": {
+            "value": 0,
+            "units": "px"
+          },
+          "right": {
+            "value": 0,
+            "units": "px"
+          }
+        }
+    }
+} 
+"other_setting"={
+    "section_class":"",
+    "section_id":""  ,
+    "background_color": {
+        "color": "#EEEEEE",
+        "opacity": 100
+    }
+} 
+ "title"="Our Team are designed for business of all size.",
+ "contain"="Lorem ipsum dolor sit amet consectetur. Pharetra interdum congue sed facilisis. Neque quis ipsum velit et pellentesque.",
+ "box"=[
+        {
+        "image":{
+                      "size_type": "auto",
+                      "src": "{{ get_asset_url('/perfect-theme/images/content/team-member.png') }}",
+                      "alt": "team-member",
+                      "loading": "lazy",
+                      "width": 365,
+                      "height": 362,
+                      "max_width": 365,
+                      "max_height": 362
+                    },
+        "box_title":"Hanna Calzoni",
+        "contain":"Chief executive officer",
+        "social":[
+              { 
+              "social_link": {
+                    "url":{
+                      "content_id": null,
+                      "type": "EXTERNAL",
+                      "href": ""
+                    },
+                    "open_in_new_tab": false,
+                    "no_follow": false
+                  },
+          "icon": '<svg xmlns="http://www.w3.org/2000/svg" width="26" height="21" viewBox="0 0 26 21" fill="none">
+                  <path d="M16.7159 1.5624C18.0069 1.5624 19.1724 2.09062 19.9935 2.93867C21.015 2.74102 21.9779 2.38086 22.8432 1.88203C22.5084 2.89846 21.7963 3.75117 20.8702 4.29063C21.7764 4.18398 22.644 3.95117 23.4491 3.60313C22.8455 4.47578 22.0858 5.24414 21.2084 5.8582C21.2166 6.04453 21.2213 6.23281 21.2213 6.42029C21.2213 12.1754 16.7045 18.8132 8.44517 18.8132C5.91002 18.8132 3.54869 18.0898 1.56278 16.8547C1.91805 16.896 2.27542 16.9166 2.63309 16.9164C4.73661 16.9164 6.67369 16.2207 8.2108 15.0511C6.24478 15.0175 4.58541 13.757 4.01627 12.0277C4.29501 12.0799 4.57799 12.1062 4.86158 12.1062C5.26978 12.1062 5.66744 12.0535 6.04322 11.9535C3.98931 11.5546 2.44127 9.79409 2.44127 7.68272V7.62688C3.04713 7.95344 3.73892 8.14954 4.47603 8.17219C3.27056 7.39014 2.47799 6.05891 2.47799 4.54756C2.47799 3.74873 2.69989 3.00029 3.08621 2.35928C5.30028 4.99287 8.60887 6.72725 12.3413 6.90967C12.2643 6.59168 12.2245 6.25576 12.2245 5.91787C12.2245 3.51201 14.235 1.5624 16.7159 1.5624ZM16.7158 0C13.6478 0 11.1061 2.24143 10.7147 5.13752C8.20452 4.63323 5.92171 3.30432 4.28148 1.35471C4.13485 1.18029 3.95184 1.04005 3.74528 0.943825C3.53872 0.847604 3.31362 0.797732 3.08575 0.797705C3.04483 0.797715 3.00392 0.799279 2.96312 0.802392C2.71545 0.822227 2.47606 0.900734 2.26474 1.03142C2.05343 1.16211 1.87626 1.34123 1.74788 1.55395C1.20315 2.45781 0.915331 3.49317 0.915438 4.54849C0.915438 5.25278 1.04198 5.93872 1.28184 6.58013C1.02638 6.86411 0.87911 7.2356 0.87911 7.62778V7.68364C0.87911 9.21414 1.48419 10.6344 2.48888 11.6989C2.43106 11.9668 2.44395 12.2473 2.53223 12.5161C2.87874 13.5703 3.5096 14.479 4.32757 15.1711C3.77833 15.2934 3.21156 15.3551 2.63302 15.3551C2.32716 15.3551 2.0295 15.3383 1.74786 15.3039C1.68536 15.2961 1.62364 15.2934 1.56153 15.2934C0.905282 15.2934 0.309579 15.707 0.0884849 16.3379C-0.154093 17.0293 0.115072 17.7957 0.736922 18.1828C3.04476 19.6188 5.71036 20.377 8.44474 20.377C17.3322 20.377 22.6783 13.4195 22.7822 6.62344C23.5115 6.02007 24.1558 5.32075 24.6975 4.54453C24.9032 4.27443 25.0143 3.94419 25.0139 3.60469C25.0139 3.07305 24.7479 2.60312 24.3428 2.32068C24.5182 1.71951 24.3182 1.06873 23.8299 0.671069C23.5447 0.439038 23.1951 0.321069 22.8436 0.321069C22.5695 0.320812 22.3003 0.392903 22.0631 0.530054C21.5467 0.827734 20.9943 1.06328 20.4127 1.23284C19.3603 0.44104 18.0556 2.44141e-05 16.7158 0Z" fill="#8A06BE"/>
+                </svg>',
+              },
+              { 
+              "social_link": {
+                    "url":{
+                      "content_id": null,
+                      "type": "EXTERNAL",
+                      "href": ""
+                    },
+                    "open_in_new_tab": false,
+                    "no_follow": false
+                  },
+          "icon": '<svg xmlns="http://www.w3.org/2000/svg" width="26" height="25" viewBox="0 0 26 25" fill="none">
+                    <path d="M23.3233 0H2.45891C1.31885 0 0.322754 0.820311 0.322754 1.94698V22.8577C0.322754 23.9905 1.31885 25 2.45891 25H23.3171C24.4633 25 25.3227 23.9838 25.3227 22.8577V1.94698C25.3294 0.820311 24.4633 0 23.3233 0ZM8.07218 20.8387H4.49072V9.70311H8.07218V20.8387ZM6.40533 8.01003H6.37966C5.23346 8.01003 4.49127 7.1568 4.49127 6.08872C4.49127 5.00111 5.25299 4.16796 6.42487 4.16796C7.59674 4.16796 8.31381 4.99497 8.33948 6.08872C8.33892 7.1568 7.59674 8.01003 6.40533 8.01003ZM21.1614 20.8387H17.58V14.75C17.58 13.2913 17.0588 12.2946 15.763 12.2946C14.7731 12.2946 14.1871 12.9643 13.9265 13.6166C13.8289 13.851 13.8026 14.1702 13.8026 14.4961V20.8387H10.2212V9.70311H13.8026V11.2528C14.3238 10.5106 15.138 9.44251 17.0325 9.44251C19.3836 9.44251 21.162 10.9922 21.162 14.3331L21.1614 20.8387Z" fill="#8A06BE"/>
+                  </svg>',
+              }
+        ]
+        },
+        {
+        "image":{
+                      "size_type": "auto",
+                      "src": "{{ get_asset_url('/perfect-theme/images/content/team-member2.png') }}",
+                      "alt": "team-member",
+                      "loading": "lazy",
+                      "width": 365,
+                      "height": 362,
+                      "max_width": 365,
+                      "max_height": 362
+                    },
+        "box_title":"Tiana Franci",
+        "contain":"Chief executive officer",
+                "social":[
+              { 
+              "social_link": {
+                    "url":{
+                      "content_id": null,
+                      "type": "EXTERNAL",
+                      "href": ""
+                    },
+                    "open_in_new_tab": false,
+                    "no_follow": false
+                  },
+          "icon": '<svg xmlns="http://www.w3.org/2000/svg" width="26" height="21" viewBox="0 0 26 21" fill="none">
+                  <path d="M16.7159 1.5624C18.0069 1.5624 19.1724 2.09062 19.9935 2.93867C21.015 2.74102 21.9779 2.38086 22.8432 1.88203C22.5084 2.89846 21.7963 3.75117 20.8702 4.29063C21.7764 4.18398 22.644 3.95117 23.4491 3.60313C22.8455 4.47578 22.0858 5.24414 21.2084 5.8582C21.2166 6.04453 21.2213 6.23281 21.2213 6.42029C21.2213 12.1754 16.7045 18.8132 8.44517 18.8132C5.91002 18.8132 3.54869 18.0898 1.56278 16.8547C1.91805 16.896 2.27542 16.9166 2.63309 16.9164C4.73661 16.9164 6.67369 16.2207 8.2108 15.0511C6.24478 15.0175 4.58541 13.757 4.01627 12.0277C4.29501 12.0799 4.57799 12.1062 4.86158 12.1062C5.26978 12.1062 5.66744 12.0535 6.04322 11.9535C3.98931 11.5546 2.44127 9.79409 2.44127 7.68272V7.62688C3.04713 7.95344 3.73892 8.14954 4.47603 8.17219C3.27056 7.39014 2.47799 6.05891 2.47799 4.54756C2.47799 3.74873 2.69989 3.00029 3.08621 2.35928C5.30028 4.99287 8.60887 6.72725 12.3413 6.90967C12.2643 6.59168 12.2245 6.25576 12.2245 5.91787C12.2245 3.51201 14.235 1.5624 16.7159 1.5624ZM16.7158 0C13.6478 0 11.1061 2.24143 10.7147 5.13752C8.20452 4.63323 5.92171 3.30432 4.28148 1.35471C4.13485 1.18029 3.95184 1.04005 3.74528 0.943825C3.53872 0.847604 3.31362 0.797732 3.08575 0.797705C3.04483 0.797715 3.00392 0.799279 2.96312 0.802392C2.71545 0.822227 2.47606 0.900734 2.26474 1.03142C2.05343 1.16211 1.87626 1.34123 1.74788 1.55395C1.20315 2.45781 0.915331 3.49317 0.915438 4.54849C0.915438 5.25278 1.04198 5.93872 1.28184 6.58013C1.02638 6.86411 0.87911 7.2356 0.87911 7.62778V7.68364C0.87911 9.21414 1.48419 10.6344 2.48888 11.6989C2.43106 11.9668 2.44395 12.2473 2.53223 12.5161C2.87874 13.5703 3.5096 14.479 4.32757 15.1711C3.77833 15.2934 3.21156 15.3551 2.63302 15.3551C2.32716 15.3551 2.0295 15.3383 1.74786 15.3039C1.68536 15.2961 1.62364 15.2934 1.56153 15.2934C0.905282 15.2934 0.309579 15.707 0.0884849 16.3379C-0.154093 17.0293 0.115072 17.7957 0.736922 18.1828C3.04476 19.6188 5.71036 20.377 8.44474 20.377C17.3322 20.377 22.6783 13.4195 22.7822 6.62344C23.5115 6.02007 24.1558 5.32075 24.6975 4.54453C24.9032 4.27443 25.0143 3.94419 25.0139 3.60469C25.0139 3.07305 24.7479 2.60312 24.3428 2.32068C24.5182 1.71951 24.3182 1.06873 23.8299 0.671069C23.5447 0.439038 23.1951 0.321069 22.8436 0.321069C22.5695 0.320812 22.3003 0.392903 22.0631 0.530054C21.5467 0.827734 20.9943 1.06328 20.4127 1.23284C19.3603 0.44104 18.0556 2.44141e-05 16.7158 0Z" fill="#8A06BE"/>
+                </svg>',
+              },
+              { 
+              "social_link": {
+                    "url":{
+                      "content_id": null,
+                      "type": "EXTERNAL",
+                      "href": ""
+                    },
+                    "open_in_new_tab": false,
+                    "no_follow": false
+                  },
+          "icon": '<svg xmlns="http://www.w3.org/2000/svg" width="26" height="25" viewBox="0 0 26 25" fill="none">
+                    <path d="M23.3233 0H2.45891C1.31885 0 0.322754 0.820311 0.322754 1.94698V22.8577C0.322754 23.9905 1.31885 25 2.45891 25H23.3171C24.4633 25 25.3227 23.9838 25.3227 22.8577V1.94698C25.3294 0.820311 24.4633 0 23.3233 0ZM8.07218 20.8387H4.49072V9.70311H8.07218V20.8387ZM6.40533 8.01003H6.37966C5.23346 8.01003 4.49127 7.1568 4.49127 6.08872C4.49127 5.00111 5.25299 4.16796 6.42487 4.16796C7.59674 4.16796 8.31381 4.99497 8.33948 6.08872C8.33892 7.1568 7.59674 8.01003 6.40533 8.01003ZM21.1614 20.8387H17.58V14.75C17.58 13.2913 17.0588 12.2946 15.763 12.2946C14.7731 12.2946 14.1871 12.9643 13.9265 13.6166C13.8289 13.851 13.8026 14.1702 13.8026 14.4961V20.8387H10.2212V9.70311H13.8026V11.2528C14.3238 10.5106 15.138 9.44251 17.0325 9.44251C19.3836 9.44251 21.162 10.9922 21.162 14.3331L21.1614 20.8387Z" fill="#8A06BE"/>
+                  </svg>',
+              }
+        ]
+
+        },
+        {
+        "image":{
+                      "size_type": "auto",
+                      "src": "{{ get_asset_url('/perfect-theme/images/content/team-member3.png') }}",
+                      "alt": "team-member",
+                      "loading": "lazy",
+                      "width": 365,
+                      "height": 362,
+                      "max_width": 365,
+                      "max_height": 362
+                    },
+        "box_title":"Jaxson Bergson",
+        "contain":"Chief executive officer",
+                "social":[
+              { 
+              "social_link": {
+                    "url":{
+                      "content_id": null,
+                      "type": "EXTERNAL",
+                      "href": ""
+                    },
+                    "open_in_new_tab": false,
+                    "no_follow": false
+                  },
+          "icon": '<svg xmlns="http://www.w3.org/2000/svg" width="26" height="21" viewBox="0 0 26 21" fill="none">
+                  <path d="M16.7159 1.5624C18.0069 1.5624 19.1724 2.09062 19.9935 2.93867C21.015 2.74102 21.9779 2.38086 22.8432 1.88203C22.5084 2.89846 21.7963 3.75117 20.8702 4.29063C21.7764 4.18398 22.644 3.95117 23.4491 3.60313C22.8455 4.47578 22.0858 5.24414 21.2084 5.8582C21.2166 6.04453 21.2213 6.23281 21.2213 6.42029C21.2213 12.1754 16.7045 18.8132 8.44517 18.8132C5.91002 18.8132 3.54869 18.0898 1.56278 16.8547C1.91805 16.896 2.27542 16.9166 2.63309 16.9164C4.73661 16.9164 6.67369 16.2207 8.2108 15.0511C6.24478 15.0175 4.58541 13.757 4.01627 12.0277C4.29501 12.0799 4.57799 12.1062 4.86158 12.1062C5.26978 12.1062 5.66744 12.0535 6.04322 11.9535C3.98931 11.5546 2.44127 9.79409 2.44127 7.68272V7.62688C3.04713 7.95344 3.73892 8.14954 4.47603 8.17219C3.27056 7.39014 2.47799 6.05891 2.47799 4.54756C2.47799 3.74873 2.69989 3.00029 3.08621 2.35928C5.30028 4.99287 8.60887 6.72725 12.3413 6.90967C12.2643 6.59168 12.2245 6.25576 12.2245 5.91787C12.2245 3.51201 14.235 1.5624 16.7159 1.5624ZM16.7158 0C13.6478 0 11.1061 2.24143 10.7147 5.13752C8.20452 4.63323 5.92171 3.30432 4.28148 1.35471C4.13485 1.18029 3.95184 1.04005 3.74528 0.943825C3.53872 0.847604 3.31362 0.797732 3.08575 0.797705C3.04483 0.797715 3.00392 0.799279 2.96312 0.802392C2.71545 0.822227 2.47606 0.900734 2.26474 1.03142C2.05343 1.16211 1.87626 1.34123 1.74788 1.55395C1.20315 2.45781 0.915331 3.49317 0.915438 4.54849C0.915438 5.25278 1.04198 5.93872 1.28184 6.58013C1.02638 6.86411 0.87911 7.2356 0.87911 7.62778V7.68364C0.87911 9.21414 1.48419 10.6344 2.48888 11.6989C2.43106 11.9668 2.44395 12.2473 2.53223 12.5161C2.87874 13.5703 3.5096 14.479 4.32757 15.1711C3.77833 15.2934 3.21156 15.3551 2.63302 15.3551C2.32716 15.3551 2.0295 15.3383 1.74786 15.3039C1.68536 15.2961 1.62364 15.2934 1.56153 15.2934C0.905282 15.2934 0.309579 15.707 0.0884849 16.3379C-0.154093 17.0293 0.115072 17.7957 0.736922 18.1828C3.04476 19.6188 5.71036 20.377 8.44474 20.377C17.3322 20.377 22.6783 13.4195 22.7822 6.62344C23.5115 6.02007 24.1558 5.32075 24.6975 4.54453C24.9032 4.27443 25.0143 3.94419 25.0139 3.60469C25.0139 3.07305 24.7479 2.60312 24.3428 2.32068C24.5182 1.71951 24.3182 1.06873 23.8299 0.671069C23.5447 0.439038 23.1951 0.321069 22.8436 0.321069C22.5695 0.320812 22.3003 0.392903 22.0631 0.530054C21.5467 0.827734 20.9943 1.06328 20.4127 1.23284C19.3603 0.44104 18.0556 2.44141e-05 16.7158 0Z" fill="#8A06BE"/>
+                </svg>',
+              },
+              { 
+              "social_link": {
+                    "url":{
+                      "content_id": null,
+                      "type": "EXTERNAL",
+                      "href": ""
+                    },
+                    "open_in_new_tab": false,
+                    "no_follow": false
+                  },
+          "icon": '<svg xmlns="http://www.w3.org/2000/svg" width="26" height="25" viewBox="0 0 26 25" fill="none">
+                    <path d="M23.3233 0H2.45891C1.31885 0 0.322754 0.820311 0.322754 1.94698V22.8577C0.322754 23.9905 1.31885 25 2.45891 25H23.3171C24.4633 25 25.3227 23.9838 25.3227 22.8577V1.94698C25.3294 0.820311 24.4633 0 23.3233 0ZM8.07218 20.8387H4.49072V9.70311H8.07218V20.8387ZM6.40533 8.01003H6.37966C5.23346 8.01003 4.49127 7.1568 4.49127 6.08872C4.49127 5.00111 5.25299 4.16796 6.42487 4.16796C7.59674 4.16796 8.31381 4.99497 8.33948 6.08872C8.33892 7.1568 7.59674 8.01003 6.40533 8.01003ZM21.1614 20.8387H17.58V14.75C17.58 13.2913 17.0588 12.2946 15.763 12.2946C14.7731 12.2946 14.1871 12.9643 13.9265 13.6166C13.8289 13.851 13.8026 14.1702 13.8026 14.4961V20.8387H10.2212V9.70311H13.8026V11.2528C14.3238 10.5106 15.138 9.44251 17.0325 9.44251C19.3836 9.44251 21.162 10.9922 21.162 14.3331L21.1614 20.8387Z" fill="#8A06BE"/>
+                  </svg>',
+              }
+        ]
+        }
+ ]
+
+%}
+{% end_dnd_module %}
+{% end_dnd_section %}
+
+{# Content - Four Box Location #}
+{% dnd_section  padding={ 'top':0, 'bottom':0,'left':0, 'right':0 }, vertical_alignment='MIDDLE', full_width=true %}
+{% dnd_module path='/perfect-theme/modules/content/content- four-box-location', label="Content - Four Box Location" 
+"style"= {
+      "padding": {
+        "padding": {
+          "top": {
+            "value": 100,
+            "units": "px"
+          },
+          "bottom": {
+            "value": 100,
+            "units": "px"
+          },
+          "left": {
+            "value": 0,
+            "units": "px"
+          },
+          "right": {
+            "value": 0,
+            "units": "px"
+          }
+        }
+    }
+} 
+"other_setting"={
+    "section_class":"",
+    "section_id":""  ,
+    "background_color": {
+        "color": "#080808",
+        "opacity": 100
+    }
+} 
+"title"="Our Locations and Address of our Offices.",
+"box_group"=[
+    {
+    "box_title":"San Francisco.",
+    "contain":"<p>Lorem ipsum dolor sit amet consectetur. Elit eros volutpat sit ullamcorper accumsan arcu.</p>",
+    "link_group":[
+    {
+    "if_select_link":"false",
+         "link_label":"2084 Hayes St, San Francisco, CA 94117.",
+         "link_class":"address",
+    },
+    {
+    "if_select_link":"true",
+     "link": {
+                    "url":{
+                      "content_id": null,
+                      "type": "EXTERNAL",
+                      "href": ""
+                    },
+                    "open_in_new_tab": false,
+                    "no_follow": false
+                  },
+         "link_label":"emailof@perfect.com",
+         "link_class":"mail"
+    },
+        {
+    "if_select_link":"true",
+     "link": {
+                    "url":{
+                      "content_id": null,
+                      "type": "EXTERNAL",
+                      "href": ""
+                    },
+                    "open_in_new_tab": false,
+                    "no_follow": false
+                  },
+         "link_label":"+01 9955744744",
+         "link_class":"number"
+    }
+    ]
+    },
+    {
+    "box_title":"New York",
+    "contain":"<p>Lorem ipsum dolor sit amet consectetur. Elit eros volutpat sit ullamcorper accumsan arcu.</p>",
+    "link_group":[
+    {
+    "if_select_link":"false",
+         "link_label":"21 Essex St, New York, NY 10002.",
+         "link_class":"address",
+    },
+    {
+    "if_select_link":"true",
+     "link": {
+                    "url":{
+                      "content_id": null,
+                      "type": "EXTERNAL",
+                      "href": ""
+                    },
+                    "open_in_new_tab": false,
+                    "no_follow": false
+                  },
+         "link_label":"emailof@perfect.com",
+         "link_class":"mail"
+    },
+        {
+    "if_select_link":"true",
+     "link": {
+                    "url":{
+                      "content_id": null,
+                      "type": "EXTERNAL",
+                      "href": ""
+                    },
+                    "open_in_new_tab": false,
+                    "no_follow": false
+                  },
+         "link_label":"+01 9955744744",
+         "link_class":"number"
+    }
+    ]
+    },
+    {
+    "box_title":"Los Angeles.",
+    "contain":"<p>Lorem ipsum dolor sit amet consectetur. Elit eros volutpat sit ullamcorper accumsan arcu.</p>",
+    "link_group":[
+    {
+    "if_select_link":"false",
+         "link_label":"21 Essex St, Los Angeles, LA 10002.",
+         "link_class":"address",
+    },
+    {
+    "if_select_link":"true",
+     "link": {
+                    "url":{
+                      "content_id": null,
+                      "type": "EXTERNAL",
+                      "href": ""
+                    },
+                    "open_in_new_tab": false,
+                    "no_follow": false
+                  },
+         "link_label":"emailof@perfect.com",
+         "link_class":"mail"
+    },
+        {
+    "if_select_link":"true",
+     "link": {
+                    "url":{
+                      "content_id": null,
+                      "type": "EXTERNAL",
+                      "href": ""
+                    },
+                    "open_in_new_tab": false,
+                    "no_follow": false
+                  },
+         "link_label":"+01 9955744744",
+         "link_class":"number"
+    }
+    ]
+    },
+    {
+    "box_title":"San Francisco.",
+    "contain":"<p>Lorem ipsum dolor sit amet consectetur. Elit eros volutpat sit ullamcorper accumsan arcu.</p>",
+    "link_group":[
+    {
+    "if_select_link":"false",
+         "link_label":"2084 Hayes St, San Francisco, CA 94117.",
+         "link_class":"address",
+    },
+    {
+    "if_select_link":"true",
+     "link": {
+                    "url":{
+                      "content_id": null,
+                      "type": "EXTERNAL",
+                      "href": ""
+                    },
+                    "open_in_new_tab": false,
+                    "no_follow": false
+                  },
+         "link_label":"emailof@perfect.com",
+         "link_class":"mail"
+    },
+        {
+    "if_select_link":"true",
+     "link": {
+                    "url":{
+                      "content_id": null,
+                      "type": "EXTERNAL",
+                      "href": ""
+                    },
+                    "open_in_new_tab": false,
+                    "no_follow": false
+                  },
+         "link_label":"+01 9955744744",
+         "link_class":"number"
+    }
+    ]
+    }
+]
+%}
+{% end_dnd_module %}
+{% end_dnd_section %}
+
+{# Services - Three Column Grid #}
+{% dnd_section  padding={ 'top':0, 'bottom':0,'left':0, 'right':0 }, vertical_alignment='MIDDLE', full_width=true %}
+{% dnd_module path='/perfect-theme/modules/services/services-three-column-grid', label="Services - Three Column Grid" 
+"style"= {
+      "padding": {
+        "padding": {
+          "top": {
+            "value": 100,
+            "units": "px"
+          },
+          "bottom": {
+            "value": 100,
+            "units": "px"
+          },
+          "left": {
+            "value": 0,
+            "units": "px"
+          },
+          "right": {
+            "value": 0,
+            "units": "px"
+          }
+        }
+    }
+} 
+"other_setting"={
+    "section_class":"",
+    "section_id":""  ,
+    "background_color": {
+        "color": "#FFFFFF",
+        "opacity": 100
+    }
+}
+"title"="The value that drive everything we do ",
+"contain"="<p>Lorem ipsum dolor sit amet consectetur. Pharetra interdum congue sed facilisis. Neque quis ipsum velit et pellentesque.</p>",
+"box"=[
+  {
+    "number":"01 ",
+    "title":"Innovation",
+    "contain":"<p>Lorem ipsum dolor sit amet consectetur. Quam nec nulla morbi orci eget nullam malesuada. Feugiat sed bibendum nibh magna ultrices pretium mollis.</p>"
+  },
+  {
+    "number":"02 ",
+    "title":"Excellence",
+    "contain":"<p>Lorem ipsum dolor sit amet consectetur. Quam nec nulla morbi orci eget nullam malesuada. Feugiat sed bibendum nibh magna ultrices pretium mollis.</p>"
+  },
+    {
+    "number":"03 ",
+    "title":"Passion",
+    "contain":"<p>Lorem ipsum dolor sit amet consectetur. Quam nec nulla morbi orci eget nullam malesuada. Feugiat sed bibendum nibh magna ultrices pretium mollis.</p>"
+  },
+    {
+    "number":"04 ",
+    "title":"Accessibility",
+    "contain":"<p>Lorem ipsum dolor sit amet consectetur. Quam nec nulla morbi orci eget nullam malesuada. Feugiat sed bibendum nibh magna ultrices pretium mollis.</p>"
+  },
+    {
+    "number":"05 ",
+    "title":"Team work",
+    "contain":"<p>Lorem ipsum dolor sit amet consectetur. Quam nec nulla morbi orci eget nullam malesuada. Feugiat sed bibendum nibh magna ultrices pretium mollis.</p>"
+  },
+    {
+    "number":"06",
+    "title":"Ownership",
+    "contain":"<p>Lorem ipsum dolor sit amet consectetur. Quam nec nulla morbi orci eget nullam malesuada. Feugiat sed bibendum nibh magna ultrices pretium mollis.</p>"
+  }
+]
+%}
+{% end_dnd_module %}
+{% end_dnd_section %}
+
+
+
+{% end_dnd_area %}
+{% endblock body %}
+

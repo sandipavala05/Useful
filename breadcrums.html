@@ -1,0 +1,53 @@
+<div class="breadcrumbs">
+  <div class="container"> 
+    <ul>
+      {% for item in module.breadcrumbs %}
+
+      {% if item.select_link %}
+      <li class="link">
+        {% set href = item.link.url.href %}
+        {% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+        {% set href = "mailto:" + href %}
+        {% endif %}
+        <a
+           {% if item.link.url.type is equalto "CALL_TO_ACTION"  %}
+           href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+           {% else %}
+           href="{{ href|escape_url }}"
+           {% endif %}
+           {% if item.link.open_in_new_tab %}
+           target="_blank"
+           {% endif %}
+           {% if item.link.rel %}
+           rel="{{ item.link.rel|escape_attr }}"
+           {% endif %}
+           >
+          <span> {{ item.label_ }}</span>
+        </a>
+        <span class="svg">
+          /
+        </span>
+      </li> 
+      {% else %}
+      <li class="label">
+        <span> {{ item.label_ }}</span>
+        {% endif %}
+      </li> 
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<style type="text/css">
+.breadcrumbs { line-height: 0; width: 100%; display: inline-block; background-color: #fff; padding: 32px 0 0; }
+.breadcrumbs ul { flex-wrap: wrap; display: flex; align-items: center; width: 100%; list-style-type: none; margin: 0; padding: 0; gap: 12px; }
+.breadcrumbs ul li a, .breadcrumbs ul li span { color: #29399E; font-size: 16px; font-weight: 400; line-height: 16px; }
+.breadcrumbs ul li { margin: 0; display: inline-block; }
+.breadcrumbs ul li.link { display: flex; align-items: center; gap: 12px; }
+@media(max-width:767px) {
+  .breadcrumbs { padding:  20px 0 0; }
+  .breadcrumbs ul { gap: 6px; }
+  .breadcrumbs ul li.link { gap: 6px; }
+}
+
+</style>

@@ -1,0 +1,153 @@
+<div class="filter__section"style="background-color:{{ module.background_color.color }};opacity:calc({{ module.background_color.opacity }}/100)">
+  <div class="container">
+    <div class="filter_wrap">
+      {% if module.title %}
+      <div class="title">
+        <h2>{{ module.title }}</h2>
+      </div>
+      {% endif %}
+      <div class="isotop_filter">
+        {% set unique_filters = [] %}
+        <div id="filters" class="button-group">
+          <button class="button is-checked" data-filter="*">All</button>
+          {% for item in module.list_type %}
+          {% set filter_value = item.filter_button|trim|lower|replace(' ','-')|regex_replace('[^a-zA-Z0-9]+', '-') %}
+          {% if filter_value not in unique_filters %}
+          <button class="button" data-filter=".{{ filter_value }}">{{ item.filter_button }}</button>
+          {% set unique_filters = unique_filters + [filter_value] %}
+          {% endif %}
+          {% endfor %}
+        </div>
+        <div class="bottom">
+          <div class="grid">
+            {% for item in module.list_type %}       
+            <div class="element-item {{ item.filter_button|trim|lower|replace(' ','-')|regex_replace('[^a-zA-Z0-9]+', '-') }}">
+              <div class="item-inner" style="background-image: url({{ item.background_image.src }}); background-position: center center; background-size: cover; background-repeat: no-repeat;">
+                <div class="content">
+                  <span class="h6">{{ item.title }}</span>
+                  <div class="text">{{ item.content }}</div>
+                  <div class="link_text">
+                    {% set href = item.link.url.href %}
+                    {% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+                    {% set href = "mailto:" + href %}
+                    {% endif %}
+                    <a
+                       {% if item.link.url.type is equalto "CALL_TO_ACTION"  %}
+                       href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+                       {% else %}
+                       href="{{ href|escape_url }}"
+                       {% endif %}
+                       {% if item.link.open_in_new_tab %}
+                       target="_blank"
+                       {% endif %}
+                       {% if item.link.rel %}
+                       rel="{{ item.link.rel|escape_attr }}"
+                       {% endif %}
+                       >
+                      {{ item.link_label }}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.filter__section { width: 100%; display: inline-block; padding: 80px 0; }
+.filter__section .filter_wrap { width: 100%; display: inline-block; }
+.filter__section .filter_wrap  .title { width: 100%; display: inline-block; margin-bottom: 30px; }
+.filter__section .filter_wrap .isotop_filter { width: 100%; display: inline-block; }
+.filter__section .filter_wrap .isotop_filter .button-group { display: flex !important; gap: 22px; flex-wrap: wrap; margin-bottom: 30px; align-items: center; }
+.filter__section .filter_wrap .isotop_filter .button-group .button { border: 2px solid #216F2E; border-radius: 5px; padding: 9px 38px; width: fit-content; font-size: 18px; font-weight: 600 !important; color: #216F2E; background: transparent; }
+.filter__section .filter_wrap .isotop_filter .button-group .button:hover, .filter__section .filter_wrap .isotop_filter .button-group .button.is-checked, .filter__section .filter_wrap .isotop_filter .button-group .button:focus { background: #216F2E; color: #fff; }
+.filter__section .filter_wrap .isotop_filter .bottom { width: 100%; display: inline-block; }
+.filter__section .filter_wrap .grid { width: calc(100% + 20px); margin-left: -10px; display: flex; flex-wrap: wrap; align-items: stretch; }
+.filter__section .filter_wrap .grid .element-item { line-height: 0; width: calc(100%/3); display: inline-block; padding: 0 10px 20px; flex: 1; }
+.filter__section .filter_wrap .grid .element-item .item-inner { border-radius: 6px; overflow: hidden; position: relative; height: 300px; display: inline-block; width: 100%; }
+.filter__section .filter_wrap .grid .element-item .item-inner .content { justify-content: center; padding: 20px; display: flex; flex-direction: column; gap: 15px; position: relative; height: 100%; width: 100%; }
+.filter__section .filter_wrap .grid .element-item .item-inner:before { position: absolute; content: ""; left: 0; right: 0; top: 0; bottom: 0; width: 100%; height: 100% !important; background-color: rgb(0 0 0 / 52%); }
+.filter__section .filter_wrap .grid .element-item .item-inner .content span.h6 { min-height: 64px; display: -webkit-box; overflow: hidden; font-size: 24px; line-height: 32px; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; color: #fff; }
+.filter__section .filter_wrap .grid .element-item .item-inner .content .text { width: 100%; display: inline-block; }
+.filter__section .filter_wrap .grid .element-item .item-inner .content .text * { color: #fff; font-size: 18px; }
+.filter__section .filter_wrap .grid .element-item .item-inner .content .text p { text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; }
+.filter__section .filter_wrap .grid .element-item .item-inner .content .link_text { line-height: 0; display: inline-block; width: auto; }
+.filter__section .filter_wrap .grid .element-item .item-inner .content .link_text a { color: #fff; font-size: 18px; line-height: 18px; text-decoration-line: underline; text-underline-position: from-font; }
+.filter__section .filter_wrap .grid .element-item .item-inner .content .link_text a:hover { text-decoration-line: none; }
+@media(max-width:991px) {
+  .filter__section {padding: 60px 0;}
+  .filter__section .filter_wrap .isotop_filter .button-group { gap: 15px; }
+  .filter__section .filter_wrap .grid .element-item .item-inner .content span.h6 { font-size: 20px; line-height: 25px; min-height: 50px; }
+  .filter__section .filter_wrap .grid .element-item .item-inner { height: 240px; }
+}
+@media(max-width:767px) {
+  .filter__section {padding: 40px 0;}
+  .filter__section .filter_wrap .grid .element-item { width: calc(100%/2); }
+  .filter__section .filter_wrap .isotop_filter .button-group .button { padding: 9px 20px 7px 20px; line-height: 17px; }
+}
+@media(max-width:500px) {
+  .filter__section {padding: 30px 0;}
+  .filter__section .filter_wrap .grid .element-item { width: 100%; }
+  .filter__section .filter_wrap .isotop_filter .button-group { gap: 10px; }
+  .filter__section .filter_wrap .isotop_filter .button-group .button { font-size: 16px; line-height: 16px; padding: 8px 18px 6px; }
+}
+
+</style>
+
+<script>
+  
+  // quick search regex
+  var qsRegex;
+  var buttonFilter;
+
+  // init Isotope
+  var $grid = $('.grid').isotope({
+    itemSelector: '.element-item',
+    layoutMode: 'fitRows',
+    filter: function() {
+      var $this = $(this);
+      var searchResult = qsRegex ? $this.text().match( qsRegex ) : true;
+      var buttonResult = buttonFilter ? $this.is( buttonFilter ) : true;
+      return searchResult && buttonResult;
+    }
+  });
+
+  $('#filters').on( 'click', 'button', function() {
+    buttonFilter = $( this ).attr('data-filter');
+    $grid.isotope();
+  });
+
+
+  // change is-checked class on buttons
+  $('.button-group').each( function( i, buttonGroup ) {
+    var $buttonGroup = $( buttonGroup );
+    $buttonGroup.on( 'click', 'button', function() {
+      $buttonGroup.find('.is-checked').removeClass('is-checked');
+      $( this ).addClass('is-checked');
+    });
+  });
+
+
+  // debounce so filtering doesn't happen every millisecond
+  function debounce( fn, threshold ) {
+    var timeout;
+    threshold = threshold || 100;
+    return function debounced() {
+      clearTimeout( timeout );
+      var args = arguments;
+      var _this = this;
+      function delayed() {
+        fn.apply( _this, args );
+      }
+      timeout = setTimeout( delayed, threshold );
+    };
+  }
+
+</script>
+
+<script src="https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
