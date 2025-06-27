@@ -1,0 +1,12 @@
+{% set my_tags = blog_tags("default", 250) %}
+    <div class="tabbing_box_main">
+      <ul>
+        {% for tag in my_tags %}
+        <li>
+          <a href="{{ blog_tag_url(group.id, tag.slug) }}" class="category-item" title="{{ tag.name }}">
+            {{ tag.name }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
