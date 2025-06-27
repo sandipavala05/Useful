@@ -28,6 +28,7 @@ img{width:100%;object-fit:contain;object-position:center;}
 .pdb-50{padding-bottom:50px;}
 .white{color:#fff!important;}
 .blue{color:#002d72!important;}
+.black{color:#fff!important;}
 
 /* Slick Slider Css Here  */
 .slick-slider .slick-arrow{background:none;border:none;z-index:9;position:absolute;top:50%;left:0;width:40px;margin:0 auto;height:40px;font-size:0;text-align:center;line-height:40px;color:#000000;cursor:pointer;padding:6px;border-radius:50%;border:2px solid #ccc;}
